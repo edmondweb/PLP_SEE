@@ -9,7 +9,7 @@ class Node:
 
 class LinkedList:
     def __init__ (self):
-        self.head = None
+        self.head = None # Start of the linked list
 
 # Add to front
     def insert_front(self, data):
@@ -45,30 +45,30 @@ if __name__ == "__main__":
 
 class DNone:
     def __init__(self, data):
-        self.data = data
-        self.next = None
-        self.prev = None
+        self.data = data # Value stored in the node
+        self.next = None # Pointers to the next nodes
+        self.prev = None # Pointers to the previous nodes
 
-    class DoublyLinkedList:
-        def __init__(self):
-            self.head = None
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None
 
-        # Add to front
-        def insert_front(self, data):
-            new_node = DNone(data)
-            new_node.next = self.head
-            if self.head is not None:
-                self.head.prev = new_node
-            self.head = new_node
-            new_node.prev = None
+    # Add to front
+    def insert_front(self, data):
+        new_node = DNone(data)
+        new_node.next = self.head
+        if self.head is not None:
+            self.head.prev = new_node
+        self.head = new_node
+        new_node.prev = None
 
-        # Print the doubly linked list
-        def print_list(self):
-            curr = self.head
-            while curr:
-                print(curr.data, end=" <-> ")
-                curr = curr.next
-            print("None")
+    # Print the doubly linked list
+    def print_list(self):
+        curr = self.head
+        while curr:
+            print(curr.data, end=" <-> ")
+            curr = curr.next
+        print("None")
 
 if __name__ == "__main__":
     dll = DoublyLinkedList()
