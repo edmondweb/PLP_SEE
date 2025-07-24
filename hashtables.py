@@ -47,5 +47,3 @@ print(hm.get("city"))
 print(hm.get("name"))
 hm.put("name", "Edmond Bonventure")  # Update value
 print(hm.get("name"))
-
-
